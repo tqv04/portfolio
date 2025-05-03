@@ -60,7 +60,7 @@ function Header() {
             md={1}
             className="d-flex justify-content-end m-0 p-0 "
           >
-            <Button className={`${styles.langBtn}`} variant="dark">
+            <Button className={`${styles.langBtn} `} variant="dark">
               ENG <i className="bi bi-globe"></i>
             </Button>
           </Col>

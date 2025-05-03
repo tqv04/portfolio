@@ -16,14 +16,10 @@ export default function IntroducePage() {
     <>
       <Container className={` mt-2 `}>
         <Row>
-          <Col
-            xs={12}
-            sm={6}
-            className="d-flex align-items-center justify-content-center"
-          >
-            <div>
+          <Col xs={12} sm={6} className={styles.mainC}>
+            <div className={styles.main}>
               <h4 className={styles.tag}>Hello, I am</h4>
-              <h2 style={{ fontSize: "5.2rem" }}>Ta Quoc Vuong</h2>
+              <h2 className={styles.tag2}>Ta Quoc Vuong</h2>
               <p
                 style={{
                   fontSize: "2rem",
@@ -33,7 +29,7 @@ export default function IntroducePage() {
               >
                 Front End Developer
               </p>
-              <ol>
+              <ol className={styles.ol}>
                 <li className="d-flex align-items-center gap-1">
                   <div className="w-3 h-3 rounded-full bg-primary"></div>
                   Web
@@ -47,30 +43,32 @@ export default function IntroducePage() {
                   Going to Web & Software Fullstack
                 </li>
               </ol>
-              <Button className={`ms-2 ${styles.faceBook}`}>
-                <Link
-                  href="https://www.facebook.com/quoc.vuong.677931/"
-                  style={{ color: "white" }}
-                >
-                  <FontAwesomeIcon icon={faFacebookF} />
-                </Link>
-              </Button>
-              <Button className={`ms-2 ${styles.gitHub}`}>
-                <Link
-                  href="https://github.com/tqv04"
-                  style={{ color: "white" }}
-                >
-                  <FontAwesomeIcon icon={faGithub} />
-                </Link>
-              </Button>
-              <Button className={`ms-2 ${styles.gitLab}`}>
-                <Link
-                  href="https://gitlab.com/vuongta2826"
-                  style={{ color: "white" }}
-                >
-                  <FontAwesomeIcon icon={faGitlab} />
-                </Link>
-              </Button>
+              <div className={styles.btnGroup}>
+                <Button className={` ${styles.faceBook}`}>
+                  <Link
+                    href="https://www.facebook.com/quoc.vuong.677931/"
+                    style={{ color: "white" }}
+                  >
+                    <FontAwesomeIcon icon={faFacebookF} />
+                  </Link>
+                </Button>
+                <Button className={`ms-2 ${styles.gitHub}`}>
+                  <Link
+                    href="https://github.com/tqv04"
+                    style={{ color: "white" }}
+                  >
+                    <FontAwesomeIcon icon={faGithub} />
+                  </Link>
+                </Button>
+                <Button className={`ms-2 ${styles.gitLab}`}>
+                  <Link
+                    href="https://gitlab.com/vuongta2826"
+                    style={{ color: "white" }}
+                  >
+                    <FontAwesomeIcon icon={faGitlab} />
+                  </Link>
+                </Button>
+              </div>
             </div>
           </Col>
 

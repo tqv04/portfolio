@@ -5,6 +5,7 @@ import Skill from "./skill/page";
 import About from "./about/page";
 import ScrollFadeIn from "./scrollfaein/ScrollFadeIn";
 import ServicePage from "./service/page";
+import ContactPage from "./contact/page";
 export default function Home() {
   return (
     <>
@@ -22,6 +23,9 @@ export default function Home() {
       </ScrollFadeIn>
       <ScrollFadeIn>
         <ProjectPage />
+      </ScrollFadeIn>
+      <ScrollFadeIn>
+        <ContactPage />
       </ScrollFadeIn>
     </>
   );

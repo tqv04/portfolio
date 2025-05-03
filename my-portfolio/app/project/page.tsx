@@ -30,8 +30,14 @@ export default function ProjectPage() {
     );
   return (
     <>
-      <Container>
-        <div className="d-flex flex-wrap gap-3 justify-content-between">
+      <Container className="my-5">
+        <h1
+          className={` mb-5 ${styles.title}`}
+          style={{ display: "inline-block" }}
+        >
+          PORTFOLIO
+        </h1>
+        <div className={`${styles.cardC} `}>
           {posts.map((post) => (
             <CardItem key={post.id} post={post} />
           ))}

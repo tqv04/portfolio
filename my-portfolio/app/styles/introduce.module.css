@@ -87,14 +87,42 @@
 .back {
   transform: rotateY(180deg);
 }
+.tag2{
+  font-size: 5.2rem;
+}
+.mainC{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 @media (max-width: 576px) {
   .tag {
     font-size: 1.5rem;
+    margin-bottom: 5px;
   }
   .h2 {
     font-size: 2.5rem;
   }
   .p {
     font-size: 1.2rem;
+  }
+  .tag2{
+    font-size: 2.5rem;
+    margin-bottom: 0px;
+  }
+  .mainC{
+    justify-content:flex-start;
+  }
+  .main{
+    padding: 0 15px;
+  }
+  .ol{
+    padding: 0;
+    margin-bottom: 10px;
+  }
+  .btnGroup{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
   }
 }

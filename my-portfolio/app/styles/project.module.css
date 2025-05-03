@@ -49,3 +49,41 @@
   transform: translateY(-5px);
   cursor: pointer;
 }
+.title{
+  color: black;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   font-size: 3rem;
+   text-transform: uppercase;
+ }
+ .title:hover{
+   color: #0866FF;
+   cursor: pointer;
+ }
+ .cardC{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+ @media (max-width: 932px) {
+.cardImg {
+  width: 330px;
+  height: 230px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+  }
+  @media (max-width: 576px) {
+    .cardC{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .title{
+      font-size: 2.5rem;
+    }
+  }

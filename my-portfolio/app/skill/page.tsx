@@ -30,13 +30,10 @@ export default function Skill() {
           </h1>
 
           <div className="d-flex flex-column">
-            <h3
-              style={{ fontSize: "1.8rem" }}
-              className="text-center text-dark mb-4"
-            >
+            <h3 className={`${styles.h3} text-center text-dark mb-4`}>
               The skills, tools and technologies I use:
             </h3>
-            <div className="d-flex justify-content-center align-items-center">
+            <div className={`${styles.techC}`}>
               <div className={`${styles.tech}`}>
                 <SiHtml5
                   style={{
