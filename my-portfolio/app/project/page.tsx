@@ -8,7 +8,7 @@ import Card from "react-bootstrap/Card";
 import { useState, useEffect } from "react";
 import Spinner from "react-bootstrap/Spinner";
 import styles from "../styles/project.module.css";
-import CardItem from "../card/page";
+import CardItem from "../card/cart";
 import Carousel from "react-bootstrap/Carousel";
 import { Image } from "react-bootstrap";
 export default function ProjectPage() {
