@@ -16,7 +16,7 @@ export default function ServicePage() {
   const [posts, setPosts] = useState<ServiceType[]>([]);
   useEffect(() => {
     async function fetchPosts() {
-      const res = await fetch("http://localhost:9000/services");
+      const res = await fetch("https://be-friedking.onrender.com/services");
       const data = await res.json();
       setPosts(data);
     }

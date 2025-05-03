@@ -16,7 +16,7 @@ export default function ProjectPage() {
   const [hovered, setHovered] = useState(false);
   useEffect(() => {
     async function fetchPosts() {
-      const res = await fetch("http://localhost:9000/Project");
+      const res = await fetch("https://be-friedking.onrender.com/Project");
       const data = await res.json();
       setPosts(data);
     }
