@@ -1,0 +1,89 @@
+.tag {
+  color: #3b82f6;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+.gitLab {
+  font-size: 20px;
+  background-color: #fc6d26;
+  border: 1px solid #fc6d26;
+  transition: background-color 0.3s ease;
+}
+.gitLab:hover {
+  background-color: #fc6d26d5;
+  border: 1px solid #fc6d26d5;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+.gitHub{
+  font-size: 20px;
+  background-color: black;
+  border: 1px solid black;
+  transition: background-color 0.3s ease;
+}
+.gitHub:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+.faceBook{
+  font-size: 20px;
+  background-color: #0866FF;
+  border: 1px solid #0866FF;
+  transition: background-color 0.3s ease;
+}
+.faceBook:hover {
+  background-color: #0867ffda;
+  border: 1px solid #0867ffda;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+.load{
+  opacity: 0;
+  transform: scale(0.5); 
+  animation: scaleUp 1s ease-out forwards;
+}
+@keyframes scaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(0.5); 
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1); 
+  }
+}
+.flipC {
+  perspective: 1000px;
+  width: 500px;
+  height: 625px;
+  position: relative;
+  z-index: 1;
+}
+
+.flipper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+}
+.flipC:hover {
+  z-index: 10;
+}
+.flipC:hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  object-fit: cover;
+  cursor: pointer;
+  background:  transparent;
+  pointer-events: none;
+}
+.back {
+  transform: rotateY(180deg);
+}

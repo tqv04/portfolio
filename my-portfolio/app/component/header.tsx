@@ -7,7 +7,11 @@ import Link from "next/link";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { useState } from "react";
 import Button from "react-bootstrap/Button";
+import { Image } from "react-bootstrap";
 import Offcanvas from "react-bootstrap/Offcanvas";
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import styles from "../styles/header.module.css";
 function Header() {
   const [show, setShow] = useState(false);
 
@@ -15,45 +19,49 @@ function Header() {
   const handleShow = () => setShow(true);
   return (
     <>
-      <Navbar bg="light" data-bs-theme="light" className="p-2">
-        <Container>
-          <Row className="w-100">
-            <Col xs={3}>
-              <Navbar.Brand onClick={handleShow} style={{ cursor: "pointer" }}>
-                Vuong
-              </Navbar.Brand>
-            </Col>
+      <Container className={`${styles.load} p-4`}>
+        <Row className="w-100 p-3">
+          <Col xs={1}>
+            <Navbar.Brand
+              onClick={handleShow}
+              style={{
+                cursor: "pointer",
+                fontSize: "26px",
+                fontWeight: "bold",
+              }}
+            >
+              Vuong
+            </Navbar.Brand>
+          </Col>
 
-            <Col xs={6} className="d-flex justify-content-center">
-              <Nav>
-                <Nav.Link href="/project">Skill</Nav.Link>
-                <Nav.Link href="#features">Portfolio</Nav.Link>
-                <Nav.Link href="#pricing">Blog</Nav.Link>
-                <Nav.Link href="#contact">Contact</Nav.Link>
-              </Nav>
-            </Col>
+          <Col
+            xs={10}
+            className="d-flex justify-content-center align-items-center"
+          >
+            <Link href="/skill" className={styles.Link}>
+              Skill
+            </Link>
+            <Link href="/project" className={styles.Link}>
+              Project
+            </Link>
+            <Link href="#pricing" className={styles.Link}>
+              Blog
+            </Link>
 
-            <Col xs={3} className="d-flex justify-content-end">
-              <Nav>
-                <NavDropdown title="English" id="navbarScrollingDropdown">
-                  <NavDropdown.Item href="#action3">English</NavDropdown.Item>
-                  <NavDropdown.Item href="#action4">
-                    Tiếng Việt
-                  </NavDropdown.Item>
-                </NavDropdown>
-                <NavDropdown title="Settings" id="navbarScrollingDropdown">
-                  <NavDropdown.Item href="#action3">Light</NavDropdown.Item>
-                  <NavDropdown.Item href="#action4">Dark</NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action5">Auto</NavDropdown.Item>
-                </NavDropdown>
-              </Nav>
-            </Col>
-          </Row>
-        </Container>
-      </Navbar>
+            <Link href="#contact" className={styles.Link}>
+              Contact
+            </Link>
+          </Col>
 
-      <Offcanvas show={show} onHide={handleClose}>
+          <Col xs={1} className="d-flex justify-content-end m-0 p-0 ">
+            <Button className={`${styles.langBtn}`} variant="dark">
+              ENG <i className="bi bi-globe"></i>
+            </Button>
+          </Col>
+        </Row>
+      </Container>
+
+      {/* <Offcanvas show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>Offcanvas</Offcanvas.Title>
         </Offcanvas.Header>
@@ -61,7 +69,7 @@ function Header() {
           Some text as placeholder. In real life you can have the elements you
           have chosen. Like, text, images, lists, etc.
         </Offcanvas.Body>
-      </Offcanvas>
+      </Offcanvas> */}
     </>
   );
 }

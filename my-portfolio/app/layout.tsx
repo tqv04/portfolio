@@ -3,6 +3,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./component/header";
+import Footer from "./component/footer";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import ScrollFadeIn from "./scrollfaein/ScrollFadeIn";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -25,11 +28,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header />
+        <ScrollFadeIn>
+          <Header />
+        </ScrollFadeIn>
+
         {children}
+        <Footer />
       </body>
     </html>
   );

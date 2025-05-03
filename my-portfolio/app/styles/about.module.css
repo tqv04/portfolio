@@ -1,0 +1,15 @@
+
+.lineB{
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.title{
+  color:  black;
+  transition: all 0.3s ease;
+  text-align: center;
+  text-transform: uppercase;
+}
+.title:hover{
+  color: #0866FF;
+  cursor: pointer;
+}
