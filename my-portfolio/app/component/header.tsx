@@ -13,17 +13,17 @@ import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "../styles/header.module.css";
 function Header() {
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
   return (
     <>
       <Container className={`${styles.load} p-4`}>
         <Row className="w-100 p-3">
-          <Col xs={1}>
+          <Col
+            xs={6}
+            sm={6}
+            md={1}
+            className="d-flex justify-content-start m-0 p-0 "
+          >
             <Navbar.Brand
-              onClick={handleShow}
               style={{
                 cursor: "pointer",
                 fontSize: "26px",
@@ -33,10 +33,11 @@ function Header() {
               Vuong
             </Navbar.Brand>
           </Col>
-
           <Col
-            xs={10}
-            className="d-flex justify-content-center align-items-center"
+            xs={0}
+            sm={0}
+            md={10}
+            className="d-flex justify-content-center align-items-center d-none d-md-flex"
           >
             <Link href="/skill" className={styles.Link}>
               Skill
@@ -53,23 +54,18 @@ function Header() {
             </Link>
           </Col>
 
-          <Col xs={1} className="d-flex justify-content-end m-0 p-0 ">
+          <Col
+            xs={6}
+            sm={6}
+            md={1}
+            className="d-flex justify-content-end m-0 p-0 "
+          >
             <Button className={`${styles.langBtn}`} variant="dark">
               ENG <i className="bi bi-globe"></i>
             </Button>
           </Col>
         </Row>
       </Container>
-
-      {/* <Offcanvas show={show} onHide={handleClose}>
-        <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
-        </Offcanvas.Header>
-        <Offcanvas.Body>
-          Some text as placeholder. In real life you can have the elements you
-          have chosen. Like, text, images, lists, etc.
-        </Offcanvas.Body>
-      </Offcanvas> */}
     </>
   );
 }

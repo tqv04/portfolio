@@ -20,7 +20,6 @@ export default function CardItem({ post }: { post: ProjectType }) {
 
         <div className={`text-white text-center ${styles.cardBody}`}>
           <Link href={post.link}>
-            {" "}
             <FaExternalLinkAlt size={20} className={styles.goTo} />
           </Link>
 

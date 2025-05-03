@@ -17,7 +17,8 @@ export default function IntroducePage() {
       <Container className={` mt-2 `}>
         <Row>
           <Col
-            xs={6}
+            xs={12}
+            sm={6}
             className="d-flex align-items-center justify-content-center"
           >
             <div>
@@ -74,7 +75,8 @@ export default function IntroducePage() {
           </Col>
 
           <Col
-            xs={6}
+            xs={12}
+            sm={6}
             className="d-flex align-items-center justify-content-center"
           >
             <div className={styles.flipC}>

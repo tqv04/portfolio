@@ -6,7 +6,6 @@
   align-items: center;
   flex-wrap: wrap; 
   justify-content: center; 
-  align-items: flex-start; 
   padding: 100px 20px 150px 20px;
   background-color: #0f111a;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
@@ -43,12 +42,12 @@
 }
 .left {
   align-self: flex-start;
-  transform: translateX(+60%); 
+  transform: translateX(-40%); 
 }
 
 .right {
   align-self: flex-end;
-  transform: translateX(+120%); 
+  transform: translateX(+40%); 
 }
 
 .icon {
@@ -69,5 +68,19 @@
     width: 100%;
     max-width: none; 
     padding: 15px 20px; 
+  }
+}
+@media (max-width: 576px) {
+  .left {
+    align-self: flex-start;
+    transform: translateX(0%); 
+  }
+  
+  .right {
+    align-self: flex-end;
+    transform: translateX(0%); 
+  }
+  .container {
+    padding: 20px 20px 200px 20px;
   }
 }

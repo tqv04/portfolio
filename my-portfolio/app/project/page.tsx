@@ -13,7 +13,6 @@ import Carousel from "react-bootstrap/Carousel";
 import { Image } from "react-bootstrap";
 export default function ProjectPage() {
   const [posts, setPosts] = useState<ProjectType[]>([]);
-  const [hovered, setHovered] = useState(false);
   useEffect(() => {
     async function fetchPosts() {
       const res = await fetch("https://be-friedking.onrender.com/Project");
