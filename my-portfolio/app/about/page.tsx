@@ -21,7 +21,7 @@ export default function About() {
                       <span className="text-yellow-300">Tạ Quốc Vượng</span>',
                       {"\n"}
                     </span>
-                    <span> yearOfBirth: 2003,{"\n"}</span>
+                    <span> yearOfBirth: 2004,{"\n"}</span>
                     <span>
                       {" "}
                       address: '<span className="text-green-300">Hà Nội</span>',

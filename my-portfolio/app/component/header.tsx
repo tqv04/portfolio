@@ -23,14 +23,19 @@ function Header() {
             md={1}
             className="d-flex justify-content-start m-0 p-0 "
           >
-            <Navbar.Brand
-              style={{
-                cursor: "pointer",
-                fontSize: "26px",
-                fontWeight: "bold",
-              }}
-            >
-              Vuong
+            <Navbar.Brand>
+              <Link
+                href="/"
+                style={{
+                  cursor: "pointer",
+                  fontSize: "26px",
+                  fontWeight: "bold",
+                  textDecoration: "none",
+                  color: "black",
+                }}
+              >
+                Vuong
+              </Link>
             </Navbar.Brand>
           </Col>
           <Col
